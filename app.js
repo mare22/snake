@@ -4,24 +4,20 @@ const snake = new Snake();
 const ground = document.getElementById('ground');
 
 
+ground.innerHTML = '';
 
-
-const render = () => {
-    ground.innerHTML = '';
-
-    snake.move();
-
-    for(let snakeDot of snake.snakeDots) {
-        ground.appendChild(snakeDot.template);
-    }
+for(let snakeDot of snake.snakeDots) {
+    ground.appendChild(snakeDot.template);
 }
 
-render();
-setInterval(render, 500)
+
+setInterval(() => {
+    snake.move()
+}, 500)
 
 document.addEventListener('keydown', (event) => {
     if(event.code === 'Space') {
-        render();
+        snake.move();
     }
 
     switch (event.code) {

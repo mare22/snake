@@ -6,8 +6,6 @@ class Snake {
             this.getDot(19,20, 'right'),
             this.getDot(18,20, 'right'),
         ];
-
-        // this.addDots(20, 20, 'right', 3);
     }
 
     // addDots(initX, initY, direction, length = 1) {
@@ -45,8 +43,8 @@ class Snake {
     getDotTemplate(x, y) {
         const snakeDotTemplate = document.createElement('div');
         snakeDotTemplate.classList.add('snake-dot');
-        snakeDotTemplate.style.top = y * 15 + 'px';
-        snakeDotTemplate.style.left = x * 15 + 'px';
+        snakeDotTemplate.style.top = (y * 15) + 'px';
+        snakeDotTemplate.style.left = (x * 15) + 'px';
 
         return snakeDotTemplate;
     }
@@ -60,16 +58,32 @@ class Snake {
 
             switch (dot.direction) {
                 case 'left':
-                    dot.position.x -= 1;
+                    if(dot.position.x === 0) {
+                        dot.position.x = 39;
+                    } else {
+                        dot.position.x -= 1;
+                    }
                     break;
                 case 'up':
-                    dot.position.y -=1;
+                    if(dot.position.y === 0) {
+                        dot.position.y = 39;
+                    } else {
+                        dot.position.y -= 1;
+                    }
                     break;
                 case 'right':
-                    dot.position.x += 1;
+                    if(dot.position.x === 39) {
+                        dot.position.x = 0;
+                    } else {
+                        dot.position.x += 1;
+                    }
                     break;
                 case 'down':
-                    dot.position.y += 1;
+                    if(dot.position.y === 39) {
+                        dot.position.y = 0;
+                    } else {
+                        dot.position.y += 1;
+                    }
                     break;
             }
 
