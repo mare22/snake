@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake</title>
+    <style>
+        .ground {
+            height: 600px;
+            width: 600px;
+            outline: solid black 1px;
+        }
+
+        .center-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
+            margin-left: -300px;
+        }
+
+        .snake-dot {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background-color: black;
+            display: inline-block;
+            /*top: 300px;*/
+            /*left: 300px;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="ground" class="ground center-screen">
+<!--        <div class="snake-dot"></div>-->
+<!--        <div class="snake-dot" style="top: 0px; left: 15px;"></div>-->
+<!--        <div class="snake-dot" style="top: 0px; left: 30px;"></div>-->
+    </div>
+    <script src="Snake.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
