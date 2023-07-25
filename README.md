@@ -1,2 +1,1 @@
-# snake
-Coding snake in javascript
+# Simple snake game
