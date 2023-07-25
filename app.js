@@ -14,10 +14,6 @@ setInterval(() => {
 }, 100)
 
 document.addEventListener('keydown', (event) => {
-    if(event.code === 'Space') {
-        snake.move();
-    }
-
     snake.changeDirection(controls[event.code]);
 })
 
